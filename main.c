@@ -6,6 +6,7 @@
 #include <sys/shm.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
+#include <unistd.h>
 #include "lab2.h"
 
 /************************************************************\
@@ -70,7 +71,8 @@ int main(int argc, char** argv)
         ipc_ptr+=start_time.tv_sec;
         // TODO: get the list of arguments to be used in execvp() and 
         // execute execvp()
-
+        char** args=get_arguments(status,command_args);
+        execvp("ls", args);
     }
     else { /* parent process */
         // TODO: have parent wait and get status of child.
