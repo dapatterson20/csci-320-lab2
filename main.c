@@ -65,9 +65,7 @@ int main(int argc, char** argv)
         // TODO: use gettimeofday to log the start time
         gettimeofday(&start_time, NULL);
         // TODO: write the time to the IPC
-        printf("a\n");
         sprintf(ipc_ptr, "%ld", (start_time.tv_sec*1000000L)+start_time.tv_usec);
-        printf("b\n");
         ipc_ptr+=(start_time.tv_sec*1000000L)+start_time.tv_usec;
         // TODO: get the list of arguments to be used in execvp() and 
         // execute execvp()
@@ -78,9 +76,7 @@ int main(int argc, char** argv)
     else { /* parent process */
         // TODO: have parent wait and get status of child.
         //       Use the variable status to store status of child.
-        printf("parent\n");
         status=wait(&status);
-        printf("parent2\n");
         // TODO: get the current time using gettimeofday
         gettimeofday(&current_time, NULL);
         // TODO: read the start time from IPC
