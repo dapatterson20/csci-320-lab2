@@ -1,4 +1,4 @@
-time: main.o lab1.o time.o
+time: main.o ipc.o time.o
 	$(CC) -o $@ $?
 
 main.o: main.c

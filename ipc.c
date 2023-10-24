@@ -6,6 +6,7 @@
 #include <sys/shm.h>
 #include <sys/stat.h>
 #include <sys/mman.h>
+#include <unistd.h>
 
 /**************************************************************
  *  ipc_create - creates a shared memory object called lab2 and
