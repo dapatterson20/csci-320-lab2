@@ -28,7 +28,7 @@ Included in the repo are,
 
 - **lab2.h** - definitions relevant to this programming project. DO NOT MODIFY.
 - **time.c** - this is where you implement `elapsed_time()` functions.
-- **ipc.c**  - this is where you implement `ipc_open()` and `ipc_read()`
+- **ipc.c**  - this is where you implement `ipc_create()`.
 - **main.c** - contains the main function.  
 - **README.md** - this file.
 
@@ -69,7 +69,7 @@ For IPC between the child and parent processes, the contents of the shared memor
 
 You are required to complete the following:
 
-1. Implement the two functions in the **ipc.c** file.  Each function is provided with commented TODOs that help you implement the functions.
+1. Implement the function in the **ipc.c** file.  Each function is provided with commented TODOs that help you implement the function.
 2. Implement the `elapsed_time`function in **time.c**.
 3. Implement the `main` function in **main.c** using the TODOs to guide you in completing it.
 2. Write a makefile that will compile and link your program into an executable called <span style="color:purple;font-family:monospace;font-style:italic;font-size:1.3em;">time</span>.
@@ -79,7 +79,7 @@ You are required to complete the following:
 Your program must perform the following:
 
 1. Use a shared memory object to communicate the start time to the parent process.
-2. Use fork to start a child process that will use the `execvp` system call to execute the command.
+2. Use fork to start a child process that will use the `execvp()` system call to execute the command.
 
 ## Submission
 
